@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('prototipoApp', [
     'ngAnimate',
@@ -16,7 +17,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngGrid'
   ])
   .config(function ($routeProvider,$locationProvider) {
     $locationProvider.hashPrefix('');
@@ -35,6 +37,16 @@ angular
         templateUrl: 'views/articulos.html',
         controller: 'ArticulosCtrl',
         controllerAs: 'articulos'
+      })
+      .when('/galeria', {
+        templateUrl: 'views/galeria.html',
+        controller: 'GaleriaCtrl',
+        controllerAs: 'galeria'
+      })
+      .when('/miembros', {
+        templateUrl: 'views/miembros.html',
+        controller: 'MiembrosCtrl',
+        controllerAs: 'miembros'
       })
       .otherwise({
         redirectTo: '/'
