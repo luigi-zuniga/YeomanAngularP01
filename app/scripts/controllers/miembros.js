@@ -36,10 +36,32 @@ angular.module('prototipoApp')
       $scope.nuevoMiembro={};
         var modalInstance = $modal.open({
         templateUrl:'views/add-miembros.html',
-        controller:'AddNuevoMiembroCtrl'
-      })}
+        controller:'AddNuevoMiembroCtrl',
+        resolve:{
+          nuevoMiembro:function(){
+            return $scope.nuevoMiembro;
+          }
+        }
+      });
+    
+      modalInstance.result.then(function(selectedItem){
+          $scope.miembros.push({
+           no:$scope.miembros.length + 1,
+           nombre:$scope.nuevoMiembro.nombre,
+           tipoMiembro:$scope.nuevoMiembro.tipoMiembro,
+           fidelidad:$scope.nuevoMiembro.fidelidad,
+           fechaUnion:$scope.nuevoMiembro.fechaUnion  
+        });
+      });
+    };
   })
-  .controller('AddNuevoMiembroCtrl',function($scope,$modalInstance){
+
+  .controller('AddNuevoMiembroCtrl',function($scope,$modalInstance,nuevoMiembro){
+    $scope.nuevoMiembro = nuevoMiembro;
+    $scope.salvarNuevoMiembro = function(){
+      $modalInstance.close(nuevoMiembro);
+    }
+
     $scope.cancel = function(){
         $modalInstance.dismiss('cancel');
     };
