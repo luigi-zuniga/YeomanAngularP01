@@ -109,3 +109,7 @@ body {
 .ngRow.even {
   background:aliceblue;
 }
+
+.modal-body input{
+  display: block;
+}
