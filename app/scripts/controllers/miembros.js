@@ -19,6 +19,10 @@ angular.module('prototipoApp')
 
     $scope.gridOptions = {
       data:'miembros',
+      showGroupPanel: true,
+      enableCellSelection:true,
+      enableRowSelection:false,
+      enableCellEdit:true,
       columnDefs:[
         {field:'no',displayName:'N°.'},
         {field:'nombre',displayName:'Nombre'},
@@ -27,5 +31,4 @@ angular.module('prototipoApp')
         {field:'tipoMiembro',displayName:'tipo de miembro'}
       ]
     };
-
   });
