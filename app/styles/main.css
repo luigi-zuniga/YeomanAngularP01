@@ -102,3 +102,10 @@ body {
   width: 940px;
   height: 300px;
 }
+
+.ngRow.odd {
+  background:yellowgreen;
+}
+.ngRow.even {
+  background:aliceblue;
+}

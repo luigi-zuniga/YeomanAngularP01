@@ -1,23 +1,30 @@
 [
     {
         "no":"1",
-        "nombre":"Carmen",
-        "fidelidad":3,
+        "nombre":"Francesca",
+        "fidelidad":8,
         "fechaUnion":"3/5/10",
-        "tipoMimbro":"Free"
+        "tipoMiembro":"Free"
     },
     {
         "no":"2",
         "nombre":"Diego",
         "fidelidad":0,
         "fechaUnion":"3/5/09",
-        "tipoMimbro":"Free"
+        "tipoMiembro":"Free"
     },
     {
         "no":"3",
         "nombre":"Jorge",
         "fidelidad":4,
         "fechaUnion":"1/1/11",
-        "tipoMimbro":"Free"
+        "tipoMiembro":"Free"
+    },
+    {
+        "no":"4",
+        "nombre":"Luis",
+        "fidelidad":4,
+        "fechaUnion":"1/1/11",
+        "tipoMiembro":"Free"
     }        
 ]
